@@ -1,0 +1,10 @@
+substantivo
+artigo
+adjetivo
+pronome
+numeral
+verbo
+adverbio
+preposicao
+conjuncao
+interjeicao
