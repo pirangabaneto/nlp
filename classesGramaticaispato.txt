@@ -1,11 +1,11 @@
 substantivo
-0
+2
 artigo
 0
 adjetivo
-0
+1
 pronome
-0
+1
 numeral
 0
 verbo
@@ -17,4 +17,4 @@ preposicao
 conjuncao
 0
 interjeicao
-0
+1

@@ -9,6 +9,11 @@ public class ClasseGramatical {
         this.ocorrencias = 0;
     }
 
+    public ClasseGramatical(String classeG, int ocorrencias){
+        this.classeG = classeG;
+        this.ocorrencias = ocorrencias;
+    }
+
     public String getClasseG() {
         return classeG;
     }

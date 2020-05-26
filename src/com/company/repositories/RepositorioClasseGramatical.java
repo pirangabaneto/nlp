@@ -21,12 +21,14 @@ public class RepositorioClasseGramatical {
         }
         bufferedReader.close();
         writer.close();
+    }
 
-        //BufferedWriter writer = new BufferedWriter(new FileWriter("classesGramaticais"+"txt", true));
-        //for(int i = 0; i < 10; i++){ //10 eh o numero de classes gramaticais
-         //   writer.write("");
-        //}
-        //writer.write(cg.getClasseG() + "\n");
-        //writer.write(cg.getOcorrencias() + "\n");
+    public void salvar(String arquivo, ArrayList<ClasseGramatical> arrayCG) throws IOException {
+        BufferedWriter writer = new BufferedWriter(new FileWriter(arquivo));
+        for(ClasseGramatical cg : arrayCG){
+            writer.write(cg.getClasseG() + "\n");
+            writer.write(cg.getOcorrencias() + "\n");
+        }
+        writer.close();
     }
 }
