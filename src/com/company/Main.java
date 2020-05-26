@@ -18,7 +18,7 @@ public class Main {
         //trabalhando CLASSEGRAMATICAL:
         ControllerClasseGramatical ccg = new ControllerClasseGramatical();
         ControllerPalavra cp = new ControllerPalavra();
-        Palavra p = new Palavra("pato", "adjetivo");
+        Palavra p = new Palavra("pandas", "substantivo");
        // System.out.println("palavrasIniciadasCom"+p.getPalavra().charAt(0));
         //System.out.println(p.getPalavra());
         cp.salvar(p);

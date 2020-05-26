@@ -3,10 +3,7 @@ package com.company.repositories;
 import com.company.models.ClasseGramatical;
 import com.company.models.Palavra;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class RepositorioPalavra {
@@ -31,12 +28,19 @@ public class RepositorioPalavra {
                 cg = bufferedReader.readLine();
                 ocorrencias = bufferedReader.readLine();
             }
-            //for(ClasseGramatical c : arrayCG){
-           //     System.out.println(c.getClasseG() + " - " + c.getOcorrencias());
-           // }
             atualizarOcorrencia(palavra, arquivo);
             repCG.salvar(arquivo, arrayCG);
         }else{
+            //adciciona palavra a arquivo
+            arquivo = "palavrasIniciadasCom"+palavra.getPalavra().charAt(0)+".txt";
+            BufferedWriter writer = new BufferedWriter(new FileWriter(arquivo, true));
+            writer.write(palavra.getPalavra() + "\n");
+            writer.close();
+
+            //cria arquivo de classes da palavra
+            repCG.salvar(palavra);
+            writer.close();
+
 
         }
     }
