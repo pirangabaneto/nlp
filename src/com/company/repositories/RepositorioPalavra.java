@@ -28,8 +28,12 @@ public class RepositorioPalavra {
                 cg = bufferedReader.readLine();
                 ocorrencias = bufferedReader.readLine();
             }
+            bufferedReader.close();
             atualizarOcorrencia(palavra, arquivo);
+            //System.out.println(arrayCG.size());
+            //System.out.println(arrayCG.size());
             repCG.salvar(arquivo, arrayCG);
+            arrayCG.clear();
         }else{
             //adciciona palavra a arquivo
             arquivo = "palavrasIniciadasCom"+palavra.getPalavra().charAt(0)+".txt";

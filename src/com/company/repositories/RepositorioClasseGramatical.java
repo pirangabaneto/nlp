@@ -7,6 +7,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class RepositorioClasseGramatical {
+    //salva nova palavra
     public void salvar(Palavra palavra) throws IOException {
         //importa todas as classes gramaticais e as repassa para a palavra
         BufferedReader bufferedReader = new BufferedReader(new FileReader("classesGramaticais.txt"));
@@ -14,9 +15,15 @@ public class RepositorioClasseGramatical {
 
         BufferedWriter writer = new BufferedWriter(new FileWriter("classesGramaticais"+palavra.getPalavra()+".txt", true));
 
+        //salva 1 ocorrencia na classe gramtical passada com a palavra
         while(line != null){
             writer.write(line + "\n");
-            writer.write("0" + "\n");
+            if(line.equals(palavra.getClasseG().getClasseG())){
+                writer.write("1" + "\n");
+            }else{
+                writer.write("0" + "\n");
+            }
+
             line = bufferedReader.readLine();
         }
         bufferedReader.close();
